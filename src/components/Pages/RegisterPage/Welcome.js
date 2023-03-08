@@ -4,13 +4,13 @@ class Welcome extends React.Component {
     render() {
         return (
             <>
-                <h1 className="blue">Bienvenid@ a Bobba</h1>
+                <h1 className="blue">Welcome to Bobba</h1>
                 <p>
-                    <img alt="Te damos la bienvenida" src="/web-gallery/images/welcome_frank.png" />
+                    <img alt="Welcome" src="/web-gallery/images/welcome_frank.png" />
                 </p>
                 <p>
-                    Estás a punto de entrar a un lugar increíble, donde compartirás nuevas experiencias mientras
-                    conocerás nuevas personas de todas partes. Veas donde lo veas... ¡La diversión nunca acaba!
+                    You are about to enter an incredible place, where you will share new experiences while 
+                     You will know new people from everywhere. See where you see it ... fun never ends!
                 </p>
             </>
         );

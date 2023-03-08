@@ -7,7 +7,7 @@ class ArticlePreview extends React.Component {
         const { title, description, image, link } = this.props.article;
         return (
             <section className="news_preview">
-                <img alt="Imagen de la noticia" src={image} />
+                <img alt="Image of the news" src={image} />
                 <div>
                     <h2>
                         {title}

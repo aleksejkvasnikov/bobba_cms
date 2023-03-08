@@ -1,6 +1,6 @@
 import NProgress from 'nprogress';
 
-const API_URL = 'http://api.bobba.io:1232/';
+const API_URL = 'http://localhost:1232/';
 const FAKE_DELAY = 250;
 const DELAY = 0;
 
@@ -63,8 +63,8 @@ export const tryGetNewsFake2 = (id) => {
         setTimeout(() => {
             const okResponse = {
                 id,
-                title: '¿Qué ha pasado?' + id,
-                description: 'Algunos extraños sucesos han aparecido en el hotel...',
+                title: 'What happened?' + id,
+                description: 'Some strange events have appeared at the hotel ...',
                 image: 'https://i.imgur.com/M0MvbVO.png',
                 link: '4-que-ha-pasado',
                 content: '',
@@ -82,16 +82,16 @@ export const tryGetLastNewsFake2 = () => {
         setTimeout(() => {
             const okResponse = [{
                 id: 4,
-                title: 'Un nuevo comienzo',
-                description: 'Bobba abre sus puertas una vez más para ti, ¿estás preparado?',
+                title: 'A new beginning',
+                description: 'Bobba opens its doors once again for you, are you prepared?',
                 image: 'https://i.imgur.com/Pa5j9VS.png',
                 link: '4-un-nuevo-comienzo',
                 content: '',
             },
             {
                 id: 5,
-                title: 'Extraños sucesos',
-                description: '¿Alguien es capaz de explicar estos extraños comportamientos?',
+                title: 'Strange events',
+                description: 'Is anyone able to explain these strange behaviors?',
                 image: 'https://i.imgur.com/M0MvbVO.png',
                 link: '5-extranos-sucesos',
                 content: '',
@@ -347,5 +347,5 @@ export const tryChangePassword = (token, currentPassword, newPassword) => {
 };
 
 export const getClientUrl = (username, look) => {
-    return 'https://bobba.io/?username=' + username + '&look=' + look;
+    return 'https://localhost/?username=' + username + '&look=' + look;
 };

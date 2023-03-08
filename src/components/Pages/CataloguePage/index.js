@@ -60,7 +60,7 @@ class CataloguePage extends React.Component {
         if (itemClassname !== '') {
             imageUrl = getImageUrl(itemClassname);
         } else {
-            itemDescription = 'Selecciona un elemento de la lista';
+            itemDescription = 'Select an element from the list';
         }
 
         return (

@@ -27,10 +27,10 @@ class SettingsPage extends React.Component {
                         </Switch>
                     </article>
                     <article className="right_column">
-                        <h1 className="blue">Contenido</h1>
+                        <h1 className="blue">Content</h1>
                         <ul>
-                            <li><NavLink activeClassName="bold" to="/settings/password">Cambiar contraseña</NavLink></li>
-                            <li><NavLink activeClassName="bold" to="/settings/motto">Cambiar misión</NavLink></li>
+                            <li><NavLink activeClassName="bold" to="/settings/password">Change Password</NavLink></li>
+                            <li><NavLink activeClassName="bold" to="/settings/motto">Change mission</NavLink></li>
                         </ul>
                     </article>
                 </div>

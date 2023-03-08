@@ -5,19 +5,19 @@ class IndexTeaser extends React.Component {
     render() {
         return (
             <section className="news_preview">
-                <img alt="Bienvenido a Bobba" src="/web-gallery/images/habbos.gif" />
+                <img alt="Welcome to Bobba" src="/web-gallery/images/habbos.gif" />
                 <div>
                     <h2>
-                        ¡Haz amigos y únete a la diversión!
+                        Make friends and join the fun!
                     </h2>
                     <p>
-                        Estás a punto de entrar a un lugar increíble, donde compartirás nuevas experiencias mientras
-                        conocerás
-                        nuevas personas de todas partes. Veas donde lo veas... ¡La diversión nunca acaba!
+                        You are about to enter an incredible place, where you will share new experiences while 
+                         You will know 
+                         New people from everywhere. See where you see it ... fun never ends!
                     </p>
                     <Link to="/register">
                         <button>
-                            ¡Regístrate!
+                            Sign up!
                         </button>
                     </Link>
                 </div>

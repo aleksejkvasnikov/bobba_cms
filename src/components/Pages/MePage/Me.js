@@ -45,7 +45,7 @@ class Me extends React.Component {
                     </p>
                     <img src="/web-gallery/images/pencil.svg" alt="editar datos" className="edit_icon" />
                     <button onClick={this.popClient}>
-                        Entrar al hotel
+                        Enter the hotel
                     </button>
                 </div>
             </>

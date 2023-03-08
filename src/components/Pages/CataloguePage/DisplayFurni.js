@@ -6,7 +6,7 @@ class DisplayFurni extends React.Component {
         const { image, name, description } = this.props;
         return (
             <>
-                <h1 className="green">Información</h1>
+                <h1 className="green">Information</h1>
 
                 <br />
                 <img src={image} alt={name} />

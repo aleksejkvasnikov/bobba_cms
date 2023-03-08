@@ -36,7 +36,7 @@ class ChangeMotto extends React.Component {
                 dispatch(logOut());
             } else {
                 dispatch(userSetData(response.username, response.motto, response.look));
-                this.setState({ okMessage: 'La misión ha cambiado.', motto: response.motto });
+                this.setState({ okMessage: 'The motto has changed.', motto: response.motto });
             }
         });
     }
@@ -57,17 +57,17 @@ class ChangeMotto extends React.Component {
         }
         return (
             <>
-                <h1 className="green">Cambiar misión</h1>
+                <h1 className="green">Change motto</h1>
                 {messageContainer}
                 <form onSubmit={this.handleSubmit}>
                     <div className="input_group">
-                        <label htmlFor="motto">Misión: </label>
-                        <input id="motto" name="motto" type="text" aria-label="Misión" placeholder="******"
+                        <label htmlFor="motto">Motto: </label>
+                        <input id="motto" name="motto" type="text" aria-label="Motto" placeholder="******"
                             onChange={this.handleInputChange} value={motto} />
-                        <p>Una frase que te identifique.</p>
+                        <p>A phrase that identifies you.</p>
                     </div>
                     <div className="input_group">
-                        <input type="submit" value="Confirmar" aria-label="Confirmar" />
+                        <input type="submit" value="Confirm" aria-label="Confirm" />
                     </div>
                 </form>
             </>

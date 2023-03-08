@@ -106,31 +106,31 @@ class SearchFurni extends React.Component {
 
         return (
             <>
-                <h1 className="blue">Catálogo de objetos</h1>
+                <h1 className="blue">Object catalog</h1>
                 <form onSubmit={this.handleSubmit}>
                     <div className="input_group">
-                        <label htmlFor="search">Buscar: </label>
-                        <input id="search" name="search" type="text" aria-label="Buscar" placeholder="shelves_norja"
+                        <label htmlFor="search">Look for: </label>
+                        <input id="search" name="search" type="text" aria-label="Look for" placeholder="shelves_norja"
                             onChange={this.handleInputChange} value={search} />
-                        <p>Puedes buscar un objeto por su nombre</p>
+                        <p>You can look for an object by name</p>
                     </div>
                 </form>
 
-                <h2>Resultado de la búsqueda:</h2>
+                <h2>Search result:</h2>
 
                 <table>
                     <thead>
                         <tr>
                             <th>Id</th>
-                            <th>Nombre</th>
-                            <th>Descripción</th>
+                            <th>Name</th>
+                            <th>Description</th>
                         </tr>
                     </thead>
                     <tbody>
                         {items}
                     </tbody>
                 </table>
-                <p className='pages'>{first + 1} - {last + 1} de {total}</p>
+                <p className='pages'>{first + 1} - {last + 1} of {total}</p>
                 <ul>
                     <li onClick={this.goToFirstPage}>&lt;&lt;</li>
                     <li onClick={this.goToPreviousPage}>&lt;</li>

@@ -37,9 +37,9 @@ class LoginHeader extends React.Component {
         let errorMessage = '';
 
         if (wrongUsername) {
-            errorMessage = 'Por favor, ingresa tu nombre de usuario y contraseña';
+            errorMessage = 'Please enter your username and password';
         } else if (wrongPassword) {
-            errorMessage = 'Por favor, ingresa tu contraseña';
+            errorMessage = 'Please enter your password';
         }
         if (errorMessage === '') {
             tryLogin(this.state.username, this.state.password)
@@ -51,12 +51,12 @@ class LoginHeader extends React.Component {
                             wrongUsername: false,
                             wrongPassword: true,
                             password: '',
-                            errorMessage: 'La contraseña no es correcta'
+                            errorMessage: 'The password is not correct'
                         });
                     }
                 }).catch(err => {
                     this.setState({
-                        errorMessage: 'Error al contactar al servidor'
+                        errorMessage: 'Error when contacting the server'
                     });
                 });
             //this.setState(initialState);
@@ -93,20 +93,20 @@ class LoginHeader extends React.Component {
                     <Logo />
                     <form onSubmit={this.handleSubmit}>
                         <div className="input_group">
-                            <label htmlFor="username">Usuario: </label>
-                            <input id="username" name="username" type="text" aria-label="Usuario" placeholder="Usuario"
+                            <label htmlFor="username">User: </label>
+                            <input id="username" name="username" type="text" aria-label="User" placeholder="User"
                                 onChange={this.handleInputChange} value={username} className={usernameClassName} />
                         </div>
                         <div className="input_group">
-                            <label htmlFor="password">Contraseña: </label>
-                            <input id="password" name="password" type="password" aria-label="Contraseña"
-                                placeholder="Contraseña" onChange={this.handleInputChange} value={password}
+                            <label htmlFor="password">Password: </label>
+                            <input id="password" name="password" type="password" aria-label="Password"
+                                placeholder="Password" onChange={this.handleInputChange} value={password}
                                 className={passwordClassName} />
                         </div>
                         <div className="input_group">
                             <input id="rememberme" name="rememberme" type="checkbox" onChange={this.handleInputChange} checked={rememberme} />
-                            <label htmlFor="rememberme">Recuérdame</label>
-                            <input type="submit" value="Entrar" aria-label="Entrar" />
+                            <label htmlFor="rememberme">Remember me</label>
+                            <input type="submit" value="To enter" aria-label="To enter" />
                         </div>
                     </form>
                 </div>

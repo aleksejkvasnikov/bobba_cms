@@ -50,7 +50,7 @@ class MePage extends React.Component {
                     </article>
                 </div>
                 <article>
-                    <h1 className="blue">Últimas noticias</h1>
+                    <h1 className="blue">Last News</h1>
                     {articlePreview}
                 </article>
                 <Footer />

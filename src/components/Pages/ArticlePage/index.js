@@ -85,13 +85,13 @@ class ArticlePage extends React.Component {
                 <HeaderContainer />
                 <Navigator />
                 <article>
-                    <h1 className="blue">Noticias</h1>
+                    <h1 className="blue">News</h1>
                     <br />
                     {article}
                 </article>
 
                 <article>
-                    <h1 className="green">Más noticias</h1>
+                    <h1 className="green">More news</h1>
                     {articleList}
                 </article>
                 <Footer />

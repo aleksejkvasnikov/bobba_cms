@@ -41,11 +41,11 @@ class ChangePassword extends React.Component {
         let errorMessage = '';
 
         if (wrongNewPasswordConfirm) {
-            errorMessage = 'Las contraseñas no coinciden';
+            errorMessage = 'Passwords do not match';
         }
 
         if (wrongCurrentPassword || wrongNewPassword) {
-            errorMessage = 'Por favor, completa todos los campos';
+            errorMessage = 'Please complete all fields';
         }
 
         if (errorMessage === '') {
@@ -55,12 +55,12 @@ class ChangePassword extends React.Component {
                         dispatch(logOut());
                     } else if (response.error === 'currentPassword') {
                         this.setState({
-                            errorMessage: 'La contraseña actual no es correcta',
+                            errorMessage: 'The current password is not correct',
                             wrongCurrentPassword: true,
                         });
                     }
                 } else {
-                    this.setState(Object.assign({}, initialState, { okMessage: 'La contraseña ha cambiado.' }));
+                    this.setState(Object.assign({}, initialState, { okMessage: 'The password has changed.' }));
                 }
             });
         } else {
@@ -96,30 +96,30 @@ class ChangePassword extends React.Component {
 
         return (
             <>
-                <h1 className="green">Cambiar contraseña</h1>
+                <h1 className="green">Change Password</h1>
                 {errorContainer}
                 {messageContainer}
                 <form onSubmit={this.handleSubmit}>
                     <div className="input_group">
-                        <label htmlFor="currentPassword">Contraseña actual: </label>
-                        <input id="currentPassword" name="currentPassword" type="password" aria-label="Contraseña actual" placeholder="******"
+                        <label htmlFor="currentPassword">Current password: </label>
+                        <input id="currentPassword" name="currentPassword" type="password" aria-label="Current password" placeholder="******"
                             onChange={this.handleInputChange} value={currentPassword} className={currentPasswordClassName} />
-                        <p>Es necesario que ingreses tu contraseña actual.</p>
+                        <p>You need to enter your current password.</p>
                     </div>
                     <div className="input_group">
-                        <label htmlFor="newPassword">Nueva contraseña: </label>
-                        <input id="newPassword" name="newPassword" type="password" aria-label="Nueva contraseña" placeholder="******"
+                        <label htmlFor="newPassword">New Password: </label>
+                        <input id="newPassword" name="newPassword" type="password" aria-label="New Password" placeholder="******"
                             onChange={this.handleInputChange} value={newPassword} className={newPasswordClassName} />
-                        <p>Se recomiendan mayúsculas, minúsculas y números a la vez.</p>
+                        <p>They are recommended upper, lowercase and numbers at the same time.</p>
                     </div>
                     <div className="input_group">
-                        <label htmlFor="newPasswordConfirm">Repite contraseña: </label>
-                        <input id="newPasswordConfirm" name="newPasswordConfirm" type="password" aria-label="Repite contraseña"
+                        <label htmlFor="newPasswordConfirm">Repeat password: </label>
+                        <input id="newPasswordConfirm" name="newPasswordConfirm" type="password" aria-label="Repeat password"
                             placeholder="******" onChange={this.handleInputChange} value={newPasswordConfirm} className={newPasswordConfirmClassName} />
-                        <p>Por seguridad.</p>
+                        <p>For security.</p>
                     </div>
                     <div className="input_group">
-                        <input type="submit" value="Confirmar" aria-label="Confirmar" />
+                        <input type="submit" value="Confirm" aria-label="Confirm" />
                     </div>
                 </form>
             </>

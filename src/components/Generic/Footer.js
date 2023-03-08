@@ -4,8 +4,7 @@ class Footer extends React.Component {
     render() {
         return (
             <footer>
-                Habbo es una marca registrada de Sulake Corporation. Todos los derechos reservados a su(s) respectivo(s)
-                dueño(s).
+                Habbo is a registered trademark of Sulake Corporation. All rights reserved for its respective owners.
             </footer>
         );
     }

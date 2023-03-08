@@ -18,9 +18,9 @@ class GenericHeader extends React.Component {
 
     render() {
         const { fetched, onlineCount } = this.props.miscContext;
-        let onlineText = 'cargando...';
+        let onlineText = 'charging...';
         if (fetched) {
-            onlineText = onlineCount + ' usuarios conectados';
+            onlineText = onlineCount + 'users online';
         }
         return (
             <header>

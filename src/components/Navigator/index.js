@@ -31,15 +31,15 @@ class Navigator extends React.Component {
 
         let navOptions = (
             <>
-                <li className="rightside logout"><Link to="/" onClick={this.onLogOut}>Salir</Link></li>
-                <li className="rightside"><NavLink activeClassName="selected" to="/settings">Opciones</NavLink></li>
+                <li className="rightside logout"><Link to="/" onClick={this.onLogOut}>Go out</Link></li>
+                <li className="rightside"><NavLink activeClassName="selected" to="/settings">Options</NavLink></li>
             </>
         );
 
         if (!loggedIn) {
             username = 'Invitado';
             navOptions = (
-                <li className="rightside"><Link to="/register">Regístrate</Link></li>
+                <li className="rightside"><Link to="/register">Sign up</Link></li>
             );
         }
 
@@ -52,8 +52,8 @@ class Navigator extends React.Component {
                 <div className="full_container">
                     <ul>
                         <li><NavLink activeClassName="selected" to="/me">{username}</NavLink></li>
-                        <li><NavLink activeClassName="selected" to="/articles">Noticias</NavLink></li>
-                        <li><NavLink activeClassName="selected" to="/catalogue">Catálogo</NavLink></li>
+                        <li><NavLink activeClassName="selected" to="/articles">News</NavLink></li>
+                        <li><NavLink activeClassName="selected" to="/catalogue">Catalog</NavLink></li>
                         {navOptions}
                     </ul>
                 </div>

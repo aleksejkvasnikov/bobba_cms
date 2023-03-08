@@ -47,15 +47,15 @@ class Register extends React.Component {
         let errorMessage = '';
 
         if (wrongAccept) {
-            errorMessage = 'Debes aceptar los términos y condiciones'
+            errorMessage = 'You must agree to terms and conditions'
         }
 
         if (wrongPassword2) {
-            errorMessage = 'Las contraseñas no coinciden';
+            errorMessage = 'Passwords do not match';
         }
 
         if (wrongUsername || wrongEmail || wrongPassword) {
-            errorMessage = 'Por favor, completa todos los campos';
+            errorMessage = 'Please complete all fields';
         }
 
         if (errorMessage === '') {
@@ -67,24 +67,24 @@ class Register extends React.Component {
                         if (response.error != null) {
                             if (response.error === 'username') {
                                 this.setState({
-                                    errorMessage: 'El nombre de usuario ya está ocupado',
+                                    errorMessage: 'The username is already occupied',
                                     wrongUsername: true,
                                 });
                             } else if (response.error === 'email') {
                                 this.setState({
-                                    errorMessage: 'Ese correo ya está registrado',
+                                    errorMessage: 'That email is already registered',
                                     wrongEmail: true,
                                 });
                             }
                         } else {
                             this.setState({
-                                errorMessage: 'Error al registrar'
+                                errorMessage: 'Error when registering'
                             });
                         }
                     }
                 }).catch(err => {
                     this.setState({
-                        errorMessage: 'Error al contactar al servidor'
+                        errorMessage: 'Error when contacting the server'
                     });
                 });
         } else {
@@ -119,30 +119,30 @@ class Register extends React.Component {
 
         return (
             <>
-                <h1 className="green">Registro</h1>
+                <h1 className="green">Record</h1>
                 {errorContainer}
                 <form onSubmit={this.handleSubmit}>
                     <div className="input_group">
-                        <label htmlFor="username">Nombre de usuario: </label>
-                        <input id="username" name="username" type="text" aria-label="Nombre de usuario" placeholder="Usuario"
+                        <label htmlFor="username">Username: </label>
+                        <input id="username" name="username" type="text" aria-label="Username" placeholder="User"
                             onChange={this.handleInputChange} value={username} className={usernameClassName} />
-                        <p>De 3 a 14 carácteres. Letras, números y carácteres como (. , ; : - @).</p>
+                        <p>From 3 to 14 character. Letters, numbers y character as (. , ; : - @).</p>
                     </div>
                     <div className="input_group">
-                        <label htmlFor="email">Correo electrónico: </label>
-                        <input id="email" name="email" type="email" aria-label="Correo electrónico"
+                        <label htmlFor="email">Email: </label>
+                        <input id="email" name="email" type="email" aria-label="Email"
                             placeholder="correo@correo.com" onChange={this.handleInputChange} value={email} className={emailClassName} />
-                        <p>¡Para estar en contacto en caso de problemas!</p>
+                        <p>To be in contact in case of problems!</p>
                     </div>
                     <div className="input_group">
-                        <label htmlFor="password">Contraseña: </label>
-                        <input id="password" name="password" type="password" aria-label="Contraseña" placeholder="******"
+                        <label htmlFor="password">Password: </label>
+                        <input id="password" name="password" type="password" aria-label="Password" placeholder="******"
                             onChange={this.handleInputChange} value={password} className={passwordClassName} />
-                        <p>Se recomiendan mayúsculas, minúsculas y números a la vez.</p>
+                        <p>They are recommended upper, lowercase and numbers at the same time.</p>
                     </div>
                     <div className="input_group">
-                        <label htmlFor="password2">Repite contraseña: </label>
-                        <input id="password2" name="password2" type="password" aria-label="Repite contraseña"
+                        <label htmlFor="password2">Repeat password: </label>
+                        <input id="password2" name="password2" type="password" aria-label="Repeat password"
                             placeholder="******" onChange={this.handleInputChange} value={password2} className={password2ClassName} />
                         <p>Por seguridad.</p>
                     </div>
@@ -150,10 +150,10 @@ class Register extends React.Component {
                     <div className="input_group">
                         <input id="accept" name="accept" type="checkbox"
                             onChange={this.handleInputChange} checked={accept} className={acceptClassName} />
-                        <label htmlFor="accept">Acepto los términos y condiciones</label>
+                        <label htmlFor="accept">I accept the terms and conditions</label>
                     </div>
                     <div className="input_group">
-                        <input type="submit" value="Entrar" aria-label="Entrar" />
+                        <input type="submit" value="To enter" aria-label="To enter" />
                     </div>
                 </form>
             </>
